@@ -36,13 +36,15 @@ h2 {
     display:inline;
     list-style:none;
   }
-
-
-  justify-content: center;
-  align-items:center;
-  display: flex;
-  flex-direction: column;
-  margin:auto;
   
+  
+
+body {
+  background-color:${({theme}) => theme.colors.mainBg};
+  color: white;
+  font-family: 'Spartan', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
 
 `

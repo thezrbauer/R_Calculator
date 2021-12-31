@@ -1,8 +1,9 @@
-import React  from 'react';
-import {Container, KeyboardTop, KeyboardBtm, Button, ButtonBtm, ButtonOdd} from './styles/Keypad.styled';
+import React, {Component}  from 'react';
+import {Container, KeyboardTop, KeyboardBtm, Button, ButtonBtm1, ButtonBtm2, ButtonOdd} from './styles/Keypad.styled';
 
+class Keypad extends Component {
 
-function Keypad() {
+  render() {
     return (
          <Container className="container">
           <KeyboardTop className="keyboard-top">
@@ -29,12 +30,13 @@ function Keypad() {
             </KeyboardTop>
 
             <KeyboardBtm className="keyboard-btm">
-            <ButtonBtm className="btm-btn reset" name="res" onClick={e => this.props.onClick(e.target.name)}>Reset</ButtonBtm>
-            <ButtonBtm className="btm-btn equal" name="=" onClick={e => this.props.onClick(e.target.name)}>=</ButtonBtm>
+            <ButtonBtm1  className="btm-btn res" name="res" onClick={e => this.props.onClick(e.target.name)}>Reset</ButtonBtm1>
+            <ButtonBtm2 className="btm-btn equal" name="=" onClick={e => this.props.onClick(e.target.name)}>=</ButtonBtm2>
             </KeyboardBtm>
             </Container>
                 
         );
+};
 };
 
 export default Keypad
